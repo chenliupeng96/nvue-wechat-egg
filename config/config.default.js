@@ -65,8 +65,12 @@ module.exports = appInfo => {
     throwError: true
   };
   config.crypto = {
-    secret:  'qhdgw@45ncashdaksh2!#@3nxjdas*_672'
-};
+    secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672'
+  };
+  // jwt加密鉴权
+  config.jwt = {
+    secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672'
+  };
   return {
     ...config,
     ...userConfig,
