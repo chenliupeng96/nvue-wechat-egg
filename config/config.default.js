@@ -16,12 +16,18 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1596613511910_8807';
 
   // add your middleware config here
-  config.middleware = ['errorHandler'];
+  config.middleware = ['errorHandler','auth'];
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
   };
+
+  config.auth = {
+    ignore:['/reg','/login']
+  };
+
+
   // 关闭csrf开启跨域
   config.security = {
     // 关闭csrf
