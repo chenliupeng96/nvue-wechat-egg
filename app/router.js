@@ -14,4 +14,6 @@ module.exports = app => {
   router.post('/logout',controller.user.logout);
   // 搜索用户
   router.post('/search/user',controller.search.user);
+  // 申请添加好友
+  router.post('/apply/addfriend',controller.apply.addFriend);
 };
