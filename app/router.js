@@ -16,4 +16,6 @@ module.exports = app => {
   router.post('/search/user',controller.search.user);
   // 申请添加好友
   router.post('/apply/addfriend',controller.apply.addFriend);
+  // 获取好友申请列表
+  router.get('/apply/:page',controller.apply.list);
 };

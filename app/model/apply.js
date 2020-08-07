@@ -62,5 +62,13 @@ module.exports = app => {
       created_at: DATE,
       updated_at: DATE
   });
+  // 定义关联关系
+  Apply.associate = function(models) {
+   
+    // 反向一对多关联
+    Apply.belongsTo(app.model.User,{
+      foreignKey: 'user_id'
+    });
+ }
     return Apply;
 };
